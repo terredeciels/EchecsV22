@@ -3,8 +3,12 @@ package board;
 import static board.Constants.*;
 
 /**
- * 1	capture 2	castle 4	en passant capture 8	pushing a pawn 2 squares 16	pawn
- * move 32	promote
+ * 1	capture
+ * 2	castle
+ * 4	en passant capture
+ * 8	pushing a pawn 2 squares
+ * 16	pawn move
+ * 32	promote
  */
 public class Move {
 
