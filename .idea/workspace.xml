@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ac4d742-3573-4be4-a80a-8b611187df5f" name="Changes" comment="class Piece.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1ac4d742-3573-4be4-a80a-8b611187df5f" name="Changes" comment="Game">
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/board/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/perft/PerftCompare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/perft/PerftCompare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653946278868</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Game">
+      <created>1663691444588</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663691444588</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +141,7 @@
     </ignored-roots>
     <MESSAGE value="nettoyage 1" />
     <MESSAGE value="class Piece.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="class Piece.java" />
+    <MESSAGE value="Game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Game" />
   </component>
 </project>

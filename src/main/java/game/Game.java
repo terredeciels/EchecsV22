@@ -10,7 +10,7 @@ public class Game {
     }
 
     class Player{
-        couleur
+       int couleur;
 
     }
 }

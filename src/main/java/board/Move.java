@@ -23,12 +23,6 @@ public class Move {
         this.bits = bits;
     }
 
-//    @Override
-//    public String toString() {
-//        return  from + "," + to + ','+ promote +
-//                "," + bits;
-//    }
-
     @Override
     public String toString() {
         return  fenMailbox[mailbox64[from]] + "," + fenMailbox[mailbox64[to]] + ','+ promote +

@@ -8,13 +8,6 @@ public class Board extends Piece implements Constants {
     public int[] color = new int[64];
     public int[] piece = new int[64];
 
-    public Piece[] pieces = new Piece[64];
-    {
-        for (int c = 0; c < 64; c++) {
-            pieces[c] = new Piece();
-        }
-    }
-
     public int side;
     public int xside;
 
@@ -25,10 +18,9 @@ public class Board extends Piece implements Constants {
     private UndoMove um = new UndoMove();
     public int halfMoveClock;
     public int plyNumber;
-
     public Board() {
-    }
 
+    }
     public Board(Board board) {
         color = board.color;
         piece = board.piece;
@@ -39,7 +31,11 @@ public class Board extends Piece implements Constants {
         fifty = board.fifty;
         pseudomoves = new ArrayList<>();
         um = new UndoMove();
+        halfMoveClock= board.halfMoveClock;
+        plyNumber=board.plyNumber;
     }
+
+
 
     private boolean in_check(int s) {
         for (int i = 0; i < 64; ++i) {
@@ -173,22 +169,6 @@ public class Board extends Piece implements Constants {
 
     private void gen(int c) {
         int p = piece[c];
-//
-//        Piece q = pieces[c];// init les pieces
-//
-//        for (int d = 0; d < q.nbdir; ++d) {
-//            int _c = c;
-//            while (true) {
-//                _c = fmailbox(q, _c, d);
-//                if (_c == OUT) break;
-//                if (q.couleur != EMPTY) {
-//                    if (q.couleur == xside) gen_push(c, _c, 1);
-//                    break;
-//                }
-//                gen_push(c, _c, 0);
-//                if (!q.glisse) break;
-//            }
-//        }
         for (int d = 0; d < offsets[p]; ++d) {
             int _c = c;
             while (true) {
@@ -210,10 +190,7 @@ public class Board extends Piece implements Constants {
         }
     }
 
-    private int fmailbox(Piece q, int _c, int d) {
-        int delta = q.dir[d];
-        return mailbox[mailbox64[_c] + delta];
-    }
+
 
     private void gen_push(int from, int to, int bits) {
         if ((bits & 16) != 0) {
@@ -405,29 +382,5 @@ public class Board extends Piece implements Constants {
         }
     }
 
-    public String[] piece_char_light = {"P", "N", "B", "R", "Q", "K"};
-    public String[] piece_char_dark = {"p", "n", "b", "r", "q", "k"};
 
-    public void print_board() {
-        int i;
-
-        System.out.print("\n8 ");
-        for (i = 0; i < 64; ++i) {
-            switch (color[i]) {
-                case EMPTY:
-                    System.out.print(". ");
-                    break;
-                case LIGHT:
-                    System.out.printf(piece_char_light[piece[i]] + " ");
-                    break;
-                case DARK:
-                    System.out.printf(piece_char_dark[piece[i]] + " ");
-                    break;
-            }
-            if ((i + 1) % 8 == 0 && i != 63) {
-                System.out.printf("\n%d ", 7 - (i >> 3));
-            }
-        }
-        System.out.print("\n\n   a b c d e f g h\n\n");
-    }
 }
