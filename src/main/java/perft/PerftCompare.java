@@ -14,7 +14,7 @@ public class PerftCompare implements Constants {
 
     public static void main(String[] args) throws IOException {
         int maxDepth = 4;
-        FileReader fileReader = new FileReader("C:\\Users\\gille\\IdeaProjects\\EchecsV2\\src\\main\\java\\perft\\perftsuite.epd");
+        FileReader fileReader = new FileReader("C:\\Users\\gille\\IdeaProjects\\EchecsV22\\src\\main\\java\\perft\\perftsuite.epd");
         BufferedReader reader = new BufferedReader(fileReader);
         String line;
         int passes = 0;
@@ -37,6 +37,7 @@ public class PerftCompare implements Constants {
                     if (perftResult == result.moveCount) {
                         passes++;
                         System.out.println("PASS: " + fen + ". Moves " + result.moveCount + ", depth " + i);
+                     if (i==1)   System.out.println(board.pseudomoves);
                     } else {
                         fails++;
                         System.out.println("FAIL: " + fen + ". Moves " + result.moveCount + ", depth " + i);
@@ -59,6 +60,8 @@ public class PerftCompare implements Constants {
 
     private static class Perft {
 
+
+
         static PerftResult perft(Board board, int depth) {
 
             PerftResult result = new PerftResult();
@@ -69,6 +72,7 @@ public class PerftCompare implements Constants {
 
             board.gen();
             List<Move> moves = board.pseudomoves;
+
             for (Move move : moves) {
                 if (board.makemove(move)) {
                     PerftResult subPerft = perft(new Board(board), depth - 1);

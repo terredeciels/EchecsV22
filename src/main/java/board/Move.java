@@ -1,5 +1,7 @@
 package board;
 
+import static board.Constants.*;
+
 /**
  * 1	capture 2	castle 4	en passant capture 8	pushing a pawn 2 squares 16	pawn
  * move 32	promote
@@ -21,4 +23,15 @@ public class Move {
         this.bits = bits;
     }
 
+//    @Override
+//    public String toString() {
+//        return  from + "," + to + ','+ promote +
+//                "," + bits;
+//    }
+
+    @Override
+    public String toString() {
+        return  fenMailbox[mailbox64[from]] + "," + fenMailbox[mailbox64[to]] + ','+ promote +
+                "," + bits;
+    }
 }
