@@ -33,7 +33,7 @@ public class Game {
         result = new Result();
         if (depth == 0) {
             result.moveCount++;
-            result.moves=board.pseudomoves;
+            result.moves = board.pseudomoves;
             return result;
         }
 
@@ -47,7 +47,7 @@ public class Game {
                 result.moveCount += subPerft.moveCount;
             }
         }
-        result.moves=board.pseudomoves;
+        result.moves = board.pseudomoves;
         return result;
     }
 

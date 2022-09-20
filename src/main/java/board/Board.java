@@ -14,13 +14,15 @@ public class Board extends Piece implements Constants {
     public int castle;
     public int ep;
     public List<Move> pseudomoves = new ArrayList<>();
-    private int fifty;
-    private UndoMove um = new UndoMove();
     public int halfMoveClock;
     public int plyNumber;
+    private int fifty;
+    private UndoMove um = new UndoMove();
+
     public Board() {
 
     }
+
     public Board(Board board) {
         color = board.color;
         piece = board.piece;
@@ -31,10 +33,9 @@ public class Board extends Piece implements Constants {
         fifty = board.fifty;
         pseudomoves = new ArrayList<>();
         um = new UndoMove();
-        halfMoveClock= board.halfMoveClock;
-        plyNumber=board.plyNumber;
+        halfMoveClock = board.halfMoveClock;
+        plyNumber = board.plyNumber;
     }
-
 
 
     private boolean in_check(int s) {
@@ -189,7 +190,6 @@ public class Board extends Piece implements Constants {
             }
         }
     }
-
 
 
     private void gen_push(int from, int to, int bits) {

@@ -3,12 +3,12 @@ package perft;
 import board.Board;
 import board.Constants;
 import board.Move;
+import tools.FenToBoard;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
-import tools.FenToBoard;
 
 public class PerftCompare implements Constants {
 
@@ -37,7 +37,7 @@ public class PerftCompare implements Constants {
                     if (perftResult == result.moveCount) {
                         passes++;
                         System.out.println("PASS: " + fen + ". Moves " + result.moveCount + ", depth " + i);
-                     if (i==1)   System.out.println(board.pseudomoves);
+                        if (i == 1) System.out.println(board.pseudomoves);
                     } else {
                         fails++;
                         System.out.println("FAIL: " + fen + ". Moves " + result.moveCount + ", depth " + i);

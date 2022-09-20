@@ -1,6 +1,7 @@
 package board;
 
-import static board.Constants.*;
+import static board.Constants.fenMailbox;
+import static board.Constants.mailbox64;
 
 /**
  * 1	capture
@@ -29,7 +30,7 @@ public class Move {
 
     @Override
     public String toString() {
-        return  fenMailbox[mailbox64[from]] + "," + fenMailbox[mailbox64[to]] + ','+ promote +
+        return fenMailbox[mailbox64[from]] + "," + fenMailbox[mailbox64[to]] + ',' + promote +
                 "," + bits;
     }
 }
