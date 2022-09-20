@@ -60,8 +60,6 @@ public class PerftCompare implements Constants {
 
     private static class Perft {
 
-
-
         static PerftResult perft(Board board, int depth) {
 
             PerftResult result = new PerftResult();
@@ -84,4 +82,6 @@ public class PerftCompare implements Constants {
         }
 
     }
+
+
 }
