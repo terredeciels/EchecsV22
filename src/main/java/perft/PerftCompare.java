@@ -14,7 +14,9 @@ public class PerftCompare implements Constants {
 
     public static void main(String[] args) throws IOException {
         int maxDepth = 4;
-        FileReader fileReader = new FileReader("C:\\Users\\gille\\IdeaProjects\\EchecsV22\\src\\main\\java\\perft\\perftsuite.epd");
+       // FileReader fileReader = new FileReader("C:\\Users\\gille\\IdeaProjects\\EchecsV22\\src\\main\\java\\perft\\perftsuite.epd");
+        FileReader fileReader = new FileReader("/Users/gilles/IdeaProjects/EchecsV22/src/main/java/perft/perftsuite.epd");
+
         BufferedReader reader = new BufferedReader(fileReader);
         String line;
         int passes = 0;
